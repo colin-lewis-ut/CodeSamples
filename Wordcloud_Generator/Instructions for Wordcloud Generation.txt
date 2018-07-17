@@ -1,0 +1,27 @@
+I used wordclouds.com for the level of customization it offers.
+
+If you are using the same input files as I used, you can find the exact
+lists under "Submitted Wordcloud Lists." Just copy & paste the text into 
+the first text field that appears under "wordlist" on wordclouds.com
+
+Position:
+Copy input into a file titled "PositionInput.txt" in the same directory as
+"positioncloudparcer.py", then run the parcer. You may need to check for
+stray formatting characters that persisted through the filter.
+
+Description:
+The Descriptionparser proved ineffective, so most fomatting needs to be done
+through word. "DescritpionInput.txt" has already been formatted, but if you
+want to use updated data, you can recreate this formatting by using word's
+find and replace function to replace dates, Bank names, and formatting 
+symbols with blank characters. Finally, convert the full document to 
+"Capitalize Each Word", the feed to the website.
+
+Using wordcloud.com:
+Wordlist: Use the paste option to use our formatted data. Shape, font, & 
+color are self explanatory. However, when the cloud is generated, a box 
+will appear in the top left corner of the screen informing you that some
+words were not included. The size of words in the cloud can be adjusted 
+using the slider at the top. The clouds I provided use -65 and -5, so this
+parameter can require some fine tuning. Finally, the circulat arrow between
+widen gaps and invert will allow you to customize the slant of the text.
