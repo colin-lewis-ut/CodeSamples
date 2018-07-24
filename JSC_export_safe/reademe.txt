@@ -1,0 +1,2 @@
+This directory contains export approved documents discussing an application bubble developed at NASA's Johnson Space Center.
+This project allowed for rapid substitution of hardware and simulated subsystems within hardware in the loop testing.
