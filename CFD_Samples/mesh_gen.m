@@ -43,12 +43,12 @@ v(32, 1:2) = [lr, -cos(pi/4)];
 %      scatter(v(h,1), v(h, 2))
 %  end
 
-%Makes duplicate points with z = 1
+%Makes duplicate points with z = 1, for "3D" grid
 v(33:64, 1:2) = [v(1:32, 1:2)];
 v(33:64, 3) = 1;
 
 
-%block time
+%Generating Blocks (6 vertices)
 %block 0
 b0 = 'hex (0 8 9 1 32 40 41 33)';
 c0 = nd;
@@ -149,7 +149,7 @@ b19 = 'hex (15 31 16 8 47 63 48 40)';
 c19 = fd;
 g19 = fg;
 
-%edge time
+%Def'ing curved edges
 e = zeros(32,3);
  for i = 1:8
     e(i, 1) = r1*cos((2*i-1)*pi/8);
@@ -166,7 +166,7 @@ e = zeros(32,3);
     e(i+24,3) = 1;
  end
 
-
+%Writing to file
 fileID = fopen('blockMeshDict.txt', 'w');
 fprintf(fileID, 'FoamFile \n{\n\tversion  2.0;\n\tformat   ascii;\n\tclass    dictionary;\n\tobject   blockMeshDict;\n}');
 fprintf(fileID, '\n\nconvertToMeters 1.0;\n');
@@ -199,7 +199,7 @@ fprintf(fileID, '\t%s %s %s \n', b17, c17, g17);
 fprintf(fileID, '\t%s %s %s \n', b18, c18, g18);
 fprintf(fileID, '\t%s %s %s \n', b19, c19, g19);
 
-fprintf(fileID, ');');
+fprintf(fileID, ');'); %including formatting marks
 
 fprintf(fileID, '\nedges\n(\n');
 for m = 0:3
@@ -217,7 +217,7 @@ for m = 0:3
 end
 fprintf(fileID, ');\n');      
 
-%hardcoded boundaries, these better not change
+%Boundaries are constant for this application (the same face, regardless of size, serves as the boundary of the domain)
 
 fprintf(fileID, '\nboundary\n(\n\n');
 fprintf(fileID, '\tinlet\n\t{\n\t\ttype patch;\n\t\tfaces\n\t\t(\n');
