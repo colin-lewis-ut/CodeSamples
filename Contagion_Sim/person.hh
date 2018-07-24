@@ -1,5 +1,7 @@
 #ifndef PERSON_H
 #define PERSON_H
+
+//function header for the person class. Method commentary avaialble in .cc
 class Person{
 	private:
 		int status;

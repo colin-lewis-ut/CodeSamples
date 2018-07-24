@@ -4,6 +4,7 @@
 #include "person.hh"
 using namespace std;
 
+//Function header for Population class
 class Population{
 	private:
 		int count;
