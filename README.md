@@ -6,7 +6,7 @@ This repository is intended to offer a sampling of code samples from a variety o
 
   * #### Aerial Robotics:
   
-Written in C++, this directory contains a dummy data provider and a linear regression calculator used by Texas Aerial Robotics. The samples available here are not what is currently in use, but instead represent the last iteration of the program that was purely my work. A demonstration of this code in action (in sequence with other modules developed by the team) is available on the [Texas Aerial Robotics Facebook Page](https://www.facebook.com/texasaerialrobotics/videos/371609939999780/)
+Written in C++, this directory contains a dummy data provider and a linear regression calculator used by Texas Aerial Robotics. The samples available here are not what is currently in use, but instead represent the last iteration of the program that was purely my work. A demonstration of this code in action (in sequence with other modules developed by the team) is available on the [Texas Aerial Robotics Facebook Page.](https://www.facebook.com/texasaerialrobotics/videos/371609939999780/)
   
   * #### CFD Samples:
   
